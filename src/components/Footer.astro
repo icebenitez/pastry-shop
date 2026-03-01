@@ -1,0 +1,29 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="py-12 px-4 border-t border-stone-100 bg-stone-50 text-center">
+    <div class="mb-4 font-serif text-2xl text-brand-primary">
+        Sweet Delights
+    </div>
+    <div
+        class="flex justify-center gap-8 mb-8 text-xs uppercase tracking-widest font-bold text-stone-400"
+    >
+        <a href="/" class="hover:text-brand-primary transition-colors">Home</a>
+        <a href="/menu" class="hover:text-brand-primary transition-colors"
+            >Menu</a
+        >
+        <a href="/about" class="hover:text-brand-primary transition-colors"
+            >About</a
+        >
+        <a href="/#contact" class="hover:text-brand-primary transition-colors"
+            >Contact</a
+        >
+    </div>
+    <p class="text-stone-500 text-sm mb-6">
+        Artisanal Bakery & Patisserie since 2010.
+    </p>
+    <p class="text-stone-400 text-xs">
+        © {currentYear} Sweet Delights. All rights reserved.
+    </p>
+</footer>

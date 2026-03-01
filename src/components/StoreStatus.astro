@@ -1,0 +1,55 @@
+---
+const shopHours = {
+    // 0 is Sunday, 1 is Monday, etc.
+    1: null, // Closed on Monday
+    2: { open: 8, close: 18 },
+    3: { open: 8, close: 18 },
+    4: { open: 8, close: 18 },
+    5: { open: 8, close: 18 },
+    6: { open: 8, close: 18 },
+    0: { open: 8, close: 18 },
+};
+
+// This will run on the server (SSR) or during build time (SSG)
+// For a truly dynamic status, we'd use a client-side script
+---
+
+<div
+    id="store-status"
+    class="inline-flex items-center gap-2 px-3 py-1 bg-stone-100 rounded-full text-[10px] uppercase tracking-widest font-bold text-stone-500"
+>
+    <span id="status-dot" class="w-2 h-2 rounded-full bg-stone-300"></span>
+    <span id="status-text">Checking Status...</span>
+</div>
+
+<script define:vars={{ shopHours }}>
+    function updateStatus() {
+        const now = new Date();
+        const day = now.getDay();
+        const hour = now.getHours();
+        const mins = now.getMinutes();
+
+        const dot = document.getElementById("status-dot");
+        const text = document.getElementById("status-text");
+
+        const todayHours = shopHours[day];
+
+        if (!todayHours) {
+            dot.className = "w-2 h-2 rounded-full bg-red-400";
+            text.innerText = "Closed Today";
+            return;
+        }
+
+        if (hour >= todayHours.open && hour < todayHours.close) {
+            dot.className = "w-2 h-2 rounded-full bg-green-500 animate-pulse";
+            text.innerText = "Open Now";
+        } else {
+            dot.className = "w-2 h-2 rounded-full bg-stone-400";
+            text.innerText = `Opens at ${todayHours.open}:00 AM`;
+        }
+    }
+
+    updateStatus();
+    // Refresh every minute
+    setInterval(updateStatus, 60000);
+</script>

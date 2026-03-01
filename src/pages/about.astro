@@ -1,0 +1,326 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+---
+
+<Layout
+    title="Our Story | The Artisanal Code"
+    description="Learn about our journey from a small home bakery to a destination for pastry lovers. Discover our commitment to pure ingredients and time-honored techniques."
+    navClass="absolute top-0 left-0"
+    isNavDark={true}
+>
+    <main class="bg-stone-50 min-h-screen">
+        <!-- Hero Section -->
+        <section
+            class="relative h-[70vh] flex items-center justify-center overflow-hidden"
+        >
+            <div
+                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517433670267-08bbd4be890f?q=80&w=2000')] bg-cover bg-fixed bg-center"
+            >
+                <div class="absolute inset-0 bg-black/50"></div>
+            </div>
+            <div class="relative z-10 text-center px-4">
+                <span
+                    class="text-brand-accent uppercase tracking-[0.3em] text-sm mb-4 block"
+                    >Since 2010</span
+                >
+                <h1
+                    class="text-6xl md:text-8xl text-white mb-6 italic font-light"
+                >
+                    The Narrative
+                </h1>
+                <p
+                    class="text-stone-300 max-w-xl mx-auto text-lg font-light leading-relaxed"
+                >
+                    Crafting moments of sweetness and stories of tradition in
+                    every bite.
+                </p>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section class="py-24 px-4 max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <div class="space-y-2">
+                        <h2
+                            class="text-4xl md:text-5xl text-brand-primary leading-tight lowercase italic"
+                        >
+                            A Flourish of <br /> Passion <span
+                                class="not-italic font-sans text-stone-300 font-thin"
+                                >&</span
+                            > Tradition
+                        </h2>
+                        <div class="w-20 h-1 bg-brand-secondary"></div>
+                    </div>
+
+                    <div
+                        class="space-y-6 text-stone-600 leading-relaxed font-light"
+                    >
+                        <p>
+                            Born from a childhood memory of flour-dusted
+                            Saturdays in a grandmother's kitchen, Sweet Delights
+                            began as a small home bakery with a single rolling
+                            pin and a world of ambition.
+                        </p>
+                        <p>
+                            Our founder, Clara Beaumont, believed that a pastry
+                            shouldn't just be food—it should be an experience.
+                            After years of honing her craft in the boulangeries
+                            of Paris, she returned to her roots to bring those
+                            timeless techniques to our local community.
+                        </p>
+                        <p>
+                            Today, Sweet Delights stands as a testament to those
+                            early dreams. We remain committed to the slow,
+                            artisanal process that machines simply cannot
+                            replicate.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div
+                        class="absolute -top-6 -right-6 w-3/4 aspect-square bg-brand-accent -z-10 rounded-2xl"
+                    >
+                    </div>
+                    <Image
+                        src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=800"
+                        alt="Artisanal Bakery Interior"
+                        width={800}
+                        height={600}
+                        class="rounded-xl shadow-2xl w-full h-auto object-cover"
+                    />
+                    <div
+                        class="absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-xl hidden md:block max-w-[200px]"
+                    >
+                        <p
+                            class="text-brand-primary font-serif italic text-lg leading-tight"
+                        >
+                            "Butter, flour, and a lot of heart."
+                        </p>
+                        <p
+                            class="text-stone-400 text-[10px] uppercase tracking-widest mt-3"
+                        >
+                            — Clara Beaumont
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Craft Section -->
+        <section class="bg-brand-primary py-24 px-4 overflow-hidden">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-20">
+                    <h2
+                        class="text-white text-4xl md:text-6xl mb-6 italic font-light"
+                    >
+                        The Artisanal Code
+                    </h2>
+                    <p
+                        class="text-brand-accent/60 max-w-xl mx-auto text-lg leading-relaxed"
+                    >
+                        We don't believe in shortcuts. We believe in the alchemy
+                        of time and temperature.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-12 text-center">
+                    <div class="space-y-6">
+                        <div
+                            class="w-16 h-16 bg-white/5 mx-auto rounded-full flex items-center justify-center text-brand-secondary border border-white/10"
+                        >
+                            <span class="text-2xl">01</span>
+                        </div>
+                        <h3 class="text-2xl text-white italic">
+                            Pure Ingredients
+                        </h3>
+                        <p
+                            class="text-stone-400 font-light text-sm leading-relaxed px-4"
+                        >
+                            From stone-ground flour to organic Madagascar
+                            vanilla beans, only the finest makes its way into
+                            our pantry.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div
+                            class="w-16 h-16 bg-white/5 mx-auto rounded-full flex items-center justify-center text-brand-secondary border border-white/10"
+                        >
+                            <span class="text-2xl">02</span>
+                        </div>
+                        <h3 class="text-2xl text-white italic">
+                            Time & Patience
+                        </h3>
+                        <p
+                            class="text-stone-400 font-light text-sm leading-relaxed px-4"
+                        >
+                            Our sourdough and croissant doughs undergo a 48-hour
+                            fermentation process for depth of flavor and perfect
+                            texture.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div
+                            class="w-16 h-16 bg-white/5 mx-auto rounded-full flex items-center justify-center text-brand-secondary border border-white/10"
+                        >
+                            <span class="text-2xl">03</span>
+                        </div>
+                        <h3 class="text-2xl text-white italic">
+                            Hand-Finished
+                        </h3>
+                        <p
+                            class="text-stone-400 font-light text-sm leading-relaxed px-4"
+                        >
+                            Every glaze is applied by hand, and every decoration
+                            is a unique piece of edible art, never
+                            mass-produced.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Gallerry / Lifestyle -->
+        <section class="py-24 px-4 bg-stone-50">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="space-y-4">
+                        <Image
+                            src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=400"
+                            alt="Bread"
+                            width={400}
+                            height={256}
+                            class="rounded-lg h-64 w-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                        />
+                        <Image
+                            src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=400"
+                            alt="Cookies"
+                            width={400}
+                            height={192}
+                            class="rounded-lg h-48 w-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                        />
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <Image
+                            src="https://images.unsplash.com/photo-1510850478918-636c84c1ec7a?q=80&w=400"
+                            alt="Kitchen"
+                            width={400}
+                            height={192}
+                            class="rounded-lg h-48 w-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                        />
+                        <Image
+                            src="https://images.unsplash.com/photo-1579372781848-655d812320dc?q=80&w=400"
+                            alt="Cake"
+                            width={400}
+                            height={256}
+                            class="rounded-lg h-64 w-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                        />
+                    </div>
+                    <div class="space-y-4">
+                        <Image
+                            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=400"
+                            alt="Cake Decoration"
+                            width={400}
+                            height={256}
+                            class="rounded-lg h-64 w-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                        />
+                        <Image
+                            src="https://images.unsplash.com/photo-1512223792601-592a9809eed4?q=80&w=400"
+                            alt="Pastry close up"
+                            width={400}
+                            height={192}
+                            class="rounded-lg h-48 w-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                        />
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <Image
+                            src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?q=80&w=400"
+                            alt="Croissants"
+                            width={400}
+                            height={192}
+                            class="rounded-lg h-48 w-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                        />
+                        <Image
+                            src="https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=400"
+                            alt="Tart"
+                            width={400}
+                            height={256}
+                            class="rounded-lg h-64 w-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-24 px-4 text-center">
+            <div class="max-w-2xl mx-auto space-y-8">
+                <h2 class="text-4xl text-brand-primary italic">
+                    Come Visit Our Atelier
+                </h2>
+                <p class="text-stone-500 font-light leading-relaxed">
+                    The best stories are told over a cup of coffee and a fresh
+                    pastry. Join us at our flagship bakery and find your new
+                    favorite moment.
+                </p>
+                <div class="flex gap-4 justify-center">
+                    <a
+                        href="/#contact"
+                        class="px-10 py-4 bg-brand-primary text-white rounded-full hover:bg-stone-800 transition-all uppercase tracking-widest text-xs font-bold shadow-lg shadow-brand-primary/20"
+                    >
+                        Get Directions
+                    </a>
+                    <a
+                        href="/menu"
+                        class="px-10 py-4 border-2 border-brand-primary text-brand-primary rounded-full hover:bg-brand-primary hover:text-white transition-all uppercase tracking-widest text-xs font-bold"
+                    >
+                        View Menu
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    /* Subtle scroll animations or magazine-style positioning */
+    section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 1s ease-out;
+    }
+
+    section.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Custom fonts and text effects */
+    .italic {
+        font-style: italic;
+    }
+</style>
+
+<script>
+    document.addEventListener("astro:page-load", () => {
+        // Simple intersection observer for entrance animations
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            },
+            { threshold: 0.1 },
+        );
+
+        document.querySelectorAll("section").forEach((section) => {
+            observer.observe(section);
+        });
+    });
+</script>

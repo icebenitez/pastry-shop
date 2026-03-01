@@ -1,0 +1,46 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    image?: string;
+    type?: string;
+}
+
+const { title, description, image, type = "website" } = Astro.props;
+
+const siteData = {
+    name: "Sweet Delights",
+    description: "Artisanal Pastry Shop & Patisserie",
+    url: Astro.site,
+    logo: "/favicon.svg",
+    address: {
+        "@type": "PostalAddress",
+        streetAddress: "123 Patisserie Lane",
+        addressLocality: "Bake City",
+        addressRegion: "BC",
+        postalCode: "12345",
+        addressCountry: "US",
+    },
+    openingHours: "Tue-Sun 08:00-18:00",
+    telephone: "+1-555-123-4567",
+};
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "@id": Astro.site,
+    name: title,
+    description: description,
+    url: Astro.url,
+    image: image || siteData.logo,
+    address: siteData.address,
+    telephone: siteData.telephone,
+    openingHours: siteData.openingHours,
+    sameAs: [
+        "https://instagram.com/sweetdelights",
+        "https://facebook.com/sweetdelights",
+    ],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

@@ -1,0 +1,30 @@
+# Sweet Delights | Artisanal Pastry Shop
+
+A premium, modern web presence for a bakery/patisserie, showcasing artisanal products and providing contact information.
+
+## Technical Architecture
+- **Framework**: Astro 5 (Static Site Generation / Hybrid)
+- **Styling**: Tailwind CSS 4 (using `@theme` variables for brand colors)
+- **Typography**: Playfair Display (Serif/Headers), Inter (Sans-serif/Body)
+- **Primary Colors**: 
+  - Brand Primary: `#5c4033` (Deep Brown)
+  - Brand Secondary: `#d4a373` (Tan)
+  - Brand Accent: `#faedcd` (Cream)
+
+## Key File Locations
+- **Main Page**: `src/pages/index.astro` (Contains landing page sections: Hero, Menu, Contact)
+- **Layout**: `src/layouts/Layout.astro` (HTML wrapper, font imports, global CSS import)
+- **Design System**: `src/styles/global.css` (Tailwind 4 theme definitions and base styles)
+- **Components**: `src/components/` (Contains building blocks like `Welcome.astro`)
+
+## Project Conventions
+- Mobile-first responsive design.
+- Uses high-quality Unsplash imagery for product visualization.
+- Semantic HTML5 structure (header, main, section, footer).
+- Tailwind utility classes for layout and spacing.
+
+## Context for Development
+When adding new sections or components, maintain the "premium" aesthetic:
+- Use `font-serif` for headings ($5c4033) and `font-sans` for body text.
+- Utilize the `bg-stone-50` background for a clean, professional look.
+- Implement subtle hover effects (e.g., `hover:-translate-y-2`, `hover:scale-110` for images).
