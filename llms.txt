@@ -12,19 +12,23 @@ A premium, modern web presence for a bakery/patisserie, showcasing artisanal pro
   - Brand Accent: `#faedcd` (Cream)
 
 ## Key File Locations
-- **Main Page**: `src/pages/index.astro` (Contains landing page sections: Hero, Menu, Contact)
-- **Layout**: `src/layouts/Layout.astro` (HTML wrapper, font imports, global CSS import)
-- **Design System**: `src/styles/global.css` (Tailwind 4 theme definitions and base styles)
-- **Components**: `src/components/` (Contains building blocks like `Welcome.astro`)
+- **Home**: `src/pages/index.astro` (Hero, highlights, contact)
+- **Menu**: `src/pages/menu.astro` (Interactive magazine-style menu with cursor previews)
+- **About**: `src/pages/about.astro` (Brand story and "Artisanal Code")
+- **Error Page**: `src/pages/404.astro` (Custom styled 404)
+- **Layout**: `src/layouts/Layout.astro` (HTML wrapper, font imports, view transitions)
+- **Content**: `src/content/menu/` (Markdown files for each menu item)
 
 ## Project Conventions
-- Mobile-first responsive design.
-- Uses high-quality Unsplash imagery for product visualization.
-- Semantic HTML5 structure (header, main, section, footer).
-- Tailwind utility classes for layout and spacing.
+- Mobile-first responsive design with a "Magazine Editorial" aesthetic.
+- Uses high-quality Unsplash imagery with grayscale-to-color transitions.
+- Semantic HTML5 structure with interactive scroll animations (Intersection Observer).
+- Tailwind 4 utility classes for layout; brand colors defined in `src/styles/global.css`.
 
-## Context for Development
-When adding new sections or components, maintain the "premium" aesthetic:
-- Use `font-serif` for headings ($5c4033) and `font-sans` for body text.
-- Utilize the `bg-stone-50` background for a clean, professional look.
-- Implement subtle hover effects (e.g., `hover:-translate-y-2`, `hover:scale-110` for images).
+## Technical Details
+- **Content Management**: Menu items are managed via Astro Content Collections, grouped by categories (Signature Cakes, Morning Pastries, etc.).
+- **Interactions**:
+  - Smooth follow cursor previews on the menu page.
+  - Entrance animations using `.visible` classes triggered by Intersection Observer.
+  - Hover-driven grayscale transitions in galleries.
+- **Design system**: Uses `font-serif` for drama (`Playfair Display`) and `font-sans` for readability (`Inter`).
