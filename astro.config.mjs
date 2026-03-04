@@ -7,7 +7,7 @@ import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://pastries-shop.vercel.app',
+  site: 'https://pastry-shop-eta.vercel.app',
   adapter: vercel({
     imageService: true
   }),
