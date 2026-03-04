@@ -6,10 +6,14 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://pastries-shop.vercel.app', // Placeholder URL
+  site: 'https://pastries-shop.vercel.app',
   integrations: [sitemap()],
   image: {
-    remotePatterns: [{ protocol: 'https', hostname: 'images.unsplash.com' }],
+    domains: ['images.unsplash.com'],
+    remotePatterns: [{
+      protocol: 'https',
+      hostname: 'images.unsplash.com'
+    }],
   },
   vite: {
     plugins: [tailwindcss()]
